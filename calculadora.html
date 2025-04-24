@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>HuellaCero | Calculadora</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora Huella de Carbono</title>
+  <link rel="stylesheet" href="style_calculadora.css">
 </head>
 <body>
   <header>
@@ -16,31 +17,85 @@
       </ul>
     </nav>
   </header>
+  <div class="container">
+    <h1>🌎 Calcula tu Huella de Carbono</h1>
+    <form id="carbonForm">
+      <h2>🛠 Energía eléctrica</h2>
+      <label>¿Cuántas horas al día usas electrodomésticos?</label>
+      <select id="electrodomesticos">
+        <option value="bajo">1-2 horas</option>
+        <option value="medio">3-5 horas</option>
+        <option value="alto">6 o más horas</option>
+      </select>
+    
+      <label>¿Sueles dejar luces encendidas sin usarlas?</label>
+      <select id="luces">
+        <option value="nunca">Nunca</option>
+        <option value="aVeces">A veces</option>
+        <option value="siempre">Siempre</option>
+      </select>
+    
+      <h2>🚗 Transporte</h2>
+      <label>¿Qué medio de transporte usas con más frecuencia?</label>
+      <select id="transporte">
+        <option value="bicicleta">Bicicleta / caminar</option>
+        <option value="publico">Bus / metro</option>
+        <option value="auto">Auto / moto</option>
+      </select>
+    
+      <label>¿Cuántos kilómetros recorres al día?</label>
+      <input type="number" id="kmDia" min="0" required>
+    
+      <h2>🍔 Alimentación</h2>
+      <label>¿Con qué frecuencia comes carne?</label>
+      <select id="carne">
+        <option value="diario">Todos los días</option>
+        <option value="semanal">2-3 veces a la semana</option>
+        <option value="ocasional">1 vez a la semana o menos</option>
+        <option value="nunca">Nunca</option>
+      </select>
+    
+      <label>¿Consumes productos locales (mercado, plaza, etc)?</label>
+      <select id="locales">
+        <option value="siempre">Siempre</option>
+        <option value="aVeces">A veces</option>
+        <option value="nunca">Nunca</option>
+      </select>
+    
+      <h2>🧺 Consumo personal</h2>
+      <label>¿Con qué frecuencia compras ropa nueva?</label>
+      <select id="ropa">
+        <option value="mensual">Cada mes</option>
+        <option value="trimestral">Cada 3 meses</option>
+        <option value="raraVez">Rara vez</option>
+      </select>
+    
+      <label>¿Usas productos reutilizables (botellas, bolsas, etc)?</label>
+      <select id="reutilizables">
+        <option value="siempre">Sí, siempre</option>
+        <option value="aVeces">A veces</option>
+        <option value="nunca">No</option>
+      </select>
+    
+      <h2>🚿 Agua y residuos</h2>
+      <label>¿Tus duchas duran más de 10 minutos?</label>
+      <select id="ducha">
+        <option value="corta">Menos de 10 minutos</option>
+        <option value="larga">Más de 10 minutos</option>
+      </select>
+    
+      <label>¿Reciclas en tu casa?</label>
+      <select id="reciclaje">
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+      </select>
+    
+      <button type="submit">Calcular</button>
+    </form>
+    
 
-  <main>
-    <section class="section">
-      <h2>Calcula tu Huella de Carbono</h2>
-
-      <form id="ageForm">
-        <label for="ageGroup">¿Qué edad tienes?</label>
-        <select id="ageGroup">
-          <option value="niño">Niño</option>
-          <option value="adolescente">Adolescente</option>
-          <option value="adulto">Adulto</option>
-          <option value="adulto_mayor">Adulto Mayor</option>
-        </select>
-        <button type="submit">Siguiente</button>
-      </form>
-
-      <div id="questions"></div>
-      <div id="resultado"></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 HuellaCero | Todos los derechos reservados</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <div id="resultado" class="resultado"></div>
+  </div>
+  <script src="calculadora.js"></script>
 </body>
 </html>
