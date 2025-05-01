@@ -7,11 +7,9 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f4f8;
+  background-color: #f5f7fa;
   color: #333;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
 }
 
 /* Header */
@@ -19,11 +17,11 @@ header {
   background: #ffffff;
   padding: 20px 40px;
   border-bottom: 1px solid #e0e0e0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 header h1 {
@@ -35,28 +33,25 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 nav a {
   text-decoration: none;
   color: #2e7d32;
   font-weight: bold;
-  transition: all 0.3s;
-  padding: 5px 10px;
-  border-radius: 5px;
+  transition: color 0.3s;
 }
 
+nav a.active,
 nav a:hover {
-  background-color: #e8f5e9;
   color: #1b5e20;
 }
 
-/* Main content */
-main {
-  max-width: 1000px;
+/* Container */
+.container {
+  max-width: 800px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .section {
