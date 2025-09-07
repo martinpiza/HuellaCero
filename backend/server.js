@@ -30,19 +30,23 @@ app.get("/api/noticias", async (req, res) => {
   }
 });
 
-// Ruta para mostrar la página de noticias
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// Ruta para mostrar la página de noticias
+
 app.get("/calculadora", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "calculadora.html"));
 });
 
-// Ruta para mostrar la página de noticias
+
 app.get("/noticias", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "noticias.html"));
+});
+
+app.get("/conocenos", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "conocenos.html"));
 });
 
 // Iniciar servidor
