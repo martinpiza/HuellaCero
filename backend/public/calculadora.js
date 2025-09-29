@@ -1,3 +1,15 @@
+// 👉 Función para avanzar en las preguntas
+function siguientePregunta(num) {
+  document.getElementById("q" + num).style.display = "none";
+  let siguiente = document.getElementById("q" + (num + 1));
+  if (siguiente) {
+    siguiente.style.display = "block";
+  } else {
+    document.getElementById("final").style.display = "block";
+  }
+}
+
+// 👉 Cálculo de huella de carbono
 document.getElementById("carbonForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -24,17 +36,19 @@ document.getElementById("carbonForm").addEventListener("submit", function (e) {
   huella += valores.electrodomesticos[document.getElementById("electrodomesticos").value];
   huella += valores.luces[document.getElementById("luces").value];
   huella += valores.transporte[document.getElementById("transporte").value];
-  huella += kmInput * 0.3;
+  huella += kmInput * 0.3; // cálculo más realista por km recorrido
   huella += valores.carne[document.getElementById("carne").value];
   huella += valores.locales[document.getElementById("locales").value];
   huella += valores.ropa[document.getElementById("ropa").value];
   huella += valores.reutilizables[document.getElementById("reutilizables").value];
   huella += valores.ducha[document.getElementById("ducha").value];
   huella += valores.reciclaje[document.getElementById("reciclaje").value];
+
+  // 👉 Mostrar resultado
   let mensaje = `<h3>Resultado</h3>`;
   mensaje += `<p>Tu huella estimada es de <strong>${huella.toFixed(2)} kg CO₂/día</strong>.</p>`;
   mensaje += `<p>Una huella baja y sostenible está por debajo de <strong>8 kg CO₂/día</strong>. Si estás por encima, es importante revisar tus hábitos.</p>`;
-  
+
   if (huella < 8) {
     mensaje += `
       <div class="recomendacion buena">
@@ -67,7 +81,6 @@ document.getElementById("carbonForm").addEventListener("submit", function (e) {
         </ul>
       </div>`;
   }
-  
+
   document.getElementById("resultado").innerHTML = mensaje;
-  
 });

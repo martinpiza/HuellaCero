@@ -22,14 +22,14 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Links -->
-        <div class="collapse navbar-collapse" id="menuNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link fw-bold text-success" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-success" href="calculadora.html">Calculadora</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-success" href="noticias.html">Noticias</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold text-success" href="conocenos.html">Conocenos</a></li>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="calculadora.html" class="active">Calculadora</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
     </nav>
   </header>
@@ -62,7 +62,7 @@
         <div class="carousel-item">
           <img src="img/foto3.jpg" class="d-block w-100" alt="Imagen 3">
           <div class="carousel-caption d-flex justify-content-center align-items-center h-100">
-            <a href="conocenos.html" class="btn btn-lg btn-warning">conocenos</a>
+            <a href="conocenos.html" class="btn btn-lg btn-warning">Conocenos</a>
           </div>
         </div>
       </div>
@@ -78,17 +78,57 @@
 
     <!-- Secciones de contenido -->
     <section class="section container mt-5">
-      <h2>Bienvenido a HuellaCero</h2>
-      <p><strong>HuellaCero</strong> es una plataforma educativa creada con el propósito de promover la conciencia
-        ambiental...</p>
+      <h2 class="text-center fw-bold mb-4">Bienvenido a HuellaCero</h2>
+      <p class="lead text-center">
+        <strong>HuellaCero</strong> es una plataforma educativa creada para promover la conciencia ambiental y ayudar a
+        las personas
+        a comprender su impacto en el planeta. Aquí podrás calcular tu <em>huella de carbono</em>, aprender sobre
+        prácticas sostenibles
+        y mantenerte informado con las últimas noticias ambientales.
+      </p>
     </section>
 
-    <section class="section container">
-      <h3>🌿 ¿Por qué debemos concientizarnos sobre el medio ambiente?</h3>
-      <p>El cambio climático, la contaminación...</p>
+    <section class="section container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="fw-bold text-success">🌎 Nuestra Misión</h3>
+          <p>
+            Brindar herramientas accesibles y educativas que permitan a cualquier persona entender su impacto en el
+            medio ambiente
+            y tomar decisiones más responsables para reducirlo.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h3 class="fw-bold text-success">💡 Nuestra Visión</h3>
+          <p>
+            Convertirnos en una plataforma referente en educación ambiental, contribuyendo a una sociedad más
+            consciente, informada
+            y comprometida con el cuidado del planeta.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- resto de tus secciones ... -->
+    <section class="section container mt-5">
+      <h3 class="fw-bold text-center mb-4">🌿 ¿Por qué elegir HuellaCero?</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">✔️ Calcula tu huella de carbono de forma sencilla y rápida.</li>
+        <li class="list-group-item">✔️ Aprende con contenido educativo sobre sostenibilidad.</li>
+        <li class="list-group-item">✔️ Accede a noticias y recursos actualizados sobre medio ambiente.</li>
+        <li class="list-group-item">✔️ Forma parte de una comunidad que busca un futuro más verde.</li>
+      </ul>
+    </section>
+
+    <section class="section container mt-5 text-center">
+      <blockquote class="blockquote">
+        <p class="mb-0">"El cambio empieza por ti: pequeños pasos generan grandes transformaciones."</p>
+      </blockquote>
+    </section>
+
+    <section class="section container mt-5 text-center">
+      <footer class="blockquote-footer">HuellaCero</footer>
+    </section>
+
 
   </main>
 

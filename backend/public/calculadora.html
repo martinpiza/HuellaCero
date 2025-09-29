@@ -9,8 +9,8 @@
 <body>
   <header>
     <a class="navbar-brand" href="index.html">
-          <img src="img/huella-cero.png" alt="Logo HuellaCero" style="height: 80px;">
-        </a>
+      <img src="img/huella-cero.png" alt="Logo HuellaCero" style="height: 80px;">
+    </a>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -24,8 +24,9 @@
   <div class="container">
     <h2>🌎 Calcula tu Huella de Carbono</h2>
     <form id="carbonForm" class="calculator">
-      <!-- Sección Energía -->
-      <fieldset>
+
+      <!-- Energía -->
+      <div class="pregunta" id="q1">
         <legend>🛠 Energía eléctrica</legend>
         <label>¿Cuántas horas al día usas electrodomésticos?</label>
         <select id="electrodomesticos">
@@ -33,17 +34,21 @@
           <option value="medio">3-5 horas</option>
           <option value="alto">6 o más horas</option>
         </select>
+        <button type="button" onclick="siguientePregunta(1)">Siguiente</button>
+      </div>
 
+      <div class="pregunta" id="q2" style="display:none;">
         <label>¿Sueles dejar luces encendidas sin usarlas?</label>
         <select id="luces">
           <option value="nunca">Nunca</option>
           <option value="aVeces">A veces</option>
           <option value="siempre">Siempre</option>
         </select>
-      </fieldset>
+        <button type="button" onclick="siguientePregunta(2)">Siguiente</button>
+      </div>
 
-      <!-- Sección Transporte -->
-      <fieldset>
+      <!-- Transporte -->
+      <div class="pregunta" id="q3" style="display:none;">
         <legend>🚗 Transporte</legend>
         <label>¿Qué medio de transporte usas con más frecuencia?</label>
         <select id="transporte">
@@ -51,13 +56,17 @@
           <option value="publico">Bus / metro</option>
           <option value="auto">Auto / moto</option>
         </select>
+        <button type="button" onclick="siguientePregunta(3)">Siguiente</button>
+      </div>
 
+      <div class="pregunta" id="q4" style="display:none;">
         <label>¿Cuántos kilómetros recorres al día?</label>
         <input type="number" id="kmDia" min="0" required>
-      </fieldset>
+        <button type="button" onclick="siguientePregunta(4)">Siguiente</button>
+      </div>
 
-      <!-- Sección Alimentación -->
-      <fieldset>
+      <!-- Alimentación -->
+      <div class="pregunta" id="q5" style="display:none;">
         <legend>🍔 Alimentación</legend>
         <label>¿Con qué frecuencia comes carne?</label>
         <select id="carne">
@@ -66,17 +75,21 @@
           <option value="ocasional">1 vez a la semana o menos</option>
           <option value="nunca">Nunca</option>
         </select>
+        <button type="button" onclick="siguientePregunta(5)">Siguiente</button>
+      </div>
 
+      <div class="pregunta" id="q6" style="display:none;">
         <label>¿Consumes productos locales?</label>
         <select id="locales">
           <option value="siempre">Siempre</option>
           <option value="aVeces">A veces</option>
           <option value="nunca">Nunca</option>
         </select>
-      </fieldset>
+        <button type="button" onclick="siguientePregunta(6)">Siguiente</button>
+      </div>
 
-      <!-- Sección Consumo -->
-      <fieldset>
+      <!-- Consumo -->
+      <div class="pregunta" id="q7" style="display:none;">
         <legend>🧺 Consumo personal</legend>
         <label>¿Con qué frecuencia compras ropa nueva?</label>
         <select id="ropa">
@@ -84,38 +97,47 @@
           <option value="trimestral">Cada 3 meses</option>
           <option value="raraVez">Rara vez</option>
         </select>
+        <button type="button" onclick="siguientePregunta(7)">Siguiente</button>
+      </div>
 
+      <div class="pregunta" id="q8" style="display:none;">
         <label>¿Usas productos reutilizables?</label>
         <select id="reutilizables">
           <option value="siempre">Sí, siempre</option>
           <option value="aVeces">A veces</option>
           <option value="nunca">No</option>
         </select>
-      </fieldset>
+        <button type="button" onclick="siguientePregunta(8)">Siguiente</button>
+      </div>
 
-      <!-- Sección Agua y residuos -->
-      <fieldset>
+      <!-- Agua y residuos -->
+      <div class="pregunta" id="q9" style="display:none;">
         <legend>🚿 Agua y residuos</legend>
         <label>¿Tus duchas duran más de 10 minutos?</label>
         <select id="ducha">
           <option value="corta">Menos de 10 minutos</option>
           <option value="larga">Más de 10 minutos</option>
         </select>
+        <button type="button" onclick="siguientePregunta(9)">Siguiente</button>
+      </div>
 
+      <div class="pregunta" id="q10" style="display:none;">
         <label>¿Reciclas en tu casa?</label>
         <select id="reciclaje">
           <option value="si">Sí</option>
           <option value="no">No</option>
         </select>
-      </fieldset>
+        <button type="button" onclick="siguientePregunta(10)">Finalizar</button>
+      </div>
 
-      <button type="submit">Calcular</button>
+      <!-- Final -->
+      <div class="pregunta" id="final" style="display:none;">
+        <button type="submit">Calcular</button>
+      </div>
     </form>
 
     <div id="resultado" class="resultado"></div>
   </div>
-
-  
 
   <footer>
     <p>&copy; 2025 HuellaCero | Todos los derechos reservados</p>
