@@ -1,32 +1,72 @@
-/* Reset global */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f7fa;
-  color: #333;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f5fdf8;
 }
 
-/* Header */
-header {
-  background: #ffffff;
-  padding: 20px 40px;
-  border-bottom: 1px solid #e0e0e0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-header h1 {
+h1 {
+  text-align: center;
   color: #2e7d32;
 }
+
+.progreso {
+  background: #ddd;
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#barraProgreso {
+  height: 100%;
+  width: 0;
+  background: #4caf50;
+  transition: width 0.3s ease;
+}
+
+.pregunta {
+  display: none;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input, select {
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.botones {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btnAtras { background: #ccc; }
+#btnSiguiente { background: #2196f3; color: #fff; }
+#btnFinalizar { background: #4caf50; color: #fff; display: none; }
+
+.recomendacion {
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.recomendacion.buena { background: #c8e6c9; }
+.recomendacion.media { background: #fff9c4; }
+.recomendacion.alta { background: #ffcdd2; }
 
 nav ul {
   list-style: none;
@@ -46,104 +86,3 @@ nav a.active,
 nav a:hover {
   color: #2e7d32;
 }
-
-/* Container */
-.container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-/* Form */
-.calculator {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-fieldset {
-  border: none;
-  margin-bottom: 25px;
-}
-
-legend {
-  font-weight: bold;
-  color: #2e7d32;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-label {
-  display: block;
-  margin: 10px 0 5px;
-}
-
-select,
-input[type="number"],
-button {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-}
-
-button {
-  background-color: #2e7d32;
-  color: white;
-  font-weight: bold;
-  border: none;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #1b5e20;
-}
-
-/* Resultado */
-.resultado {
-  margin-top: 30px;
-  padding: 20px;
-  border-left: 5px solid #66bb6a;
-  background-color: #e8f5e9;
-  border-radius: 8px;
-  font-size: 1.1rem;
-}
-
-/* Footer */
-footer {
-  margin-top: 50px;
-  padding: 20px;
-  background: #ffffff;
-  border-top: 1px solid #e0e0e0;
-  text-align: center;
-  color: #777;
-}
-.recomendacion {
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 1rem;
-}
-
-.recomendacion.buena {
-  background-color: #e8f5e9;
-  border-left: 5px solid #4caf50;
-}
-
-.recomendacion.media {
-  background-color: #fffde7;
-  border-left: 5px solid #fbc02d;
-}
-
-.recomendacion.alta {
-  background-color: #ffebee;
-  border-left: 5px solid #e53935;
-}
-
-.recomendacion ul {
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
